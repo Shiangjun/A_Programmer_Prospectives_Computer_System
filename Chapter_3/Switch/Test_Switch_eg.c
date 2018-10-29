@@ -1,0 +1,31 @@
+
+
+void switch_eg(long x, long n, long *dest){
+  long val = x;
+ 
+  switch (n) {
+  
+  case 100:
+    val *= 12;
+    break;
+  
+  case 102:
+    val +=10;
+    /* Fall through */
+  
+  case 103:
+    val += 11;
+    break;
+  
+  case 104:
+  case 106:
+    val *= val;
+    break;
+ 
+
+  defalut:
+    val = 0;
+  }
+  *dest = val;
+}
+
