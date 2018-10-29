@@ -1,0 +1,30 @@
+0000000000000008 <multstore>:
+   8:	53                   	push   %rbx
+   9:	48 89 d3             	mov    %rdx,%rbx
+   c:	e8 00 00 00 00       	callq  11 <multstore+0x9>
+  11:	48 89 03             	mov    %rax,(%rbx)
+  14:	5b                   	pop    %rbx
+  15:	c3                   	retq   
+
+
+	.file	"Test_mstores_ATT.c"
+	.text
+	.globl	multstore
+	.type	multstore, @function
+multstore:
+.LFB0:
+	.cfi_startproc
+	pushq	%rbx
+	.cfi_def_cfa_offset 16
+	.cfi_offset 3, -16
+	movq	%rdx, %rbx
+	call	mult2
+	movq	%rax, (%rbx)
+	popq	%rbx
+	.cfi_def_cfa_offset 8
+	ret
+	.cfi_endproc
+.LFE0:
+	.size	multstore, .-multstore
+	.ident	"GCC: (GNU) 4.8.5 20150623 (Red Hat 4.8.5-11)"
+	.section	.note.GNU-stack,"",@progbits
