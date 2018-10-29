@@ -1,4 +1,6 @@
 # A_Programmer_Prospectives_Computer_System
-Self-learning materials for APPCS 3rd version
+Self-learning summary about the book
 
-Please note: This is early materials in my laptop. Last updated: Dec. 2017
+APPCS 3rd version
+
+Last updated: Dec. 2017
